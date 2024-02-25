@@ -35,7 +35,7 @@ const App = () => {
           Store.map((mapping) => {
             return (
               <div key={mapping.id} className='item'>
-                <p className='item-text'>{mapping.itemName}</p>
+                <p className='item-text' style={{ textDecoration: mapping.completed ? 'line-through' : 'none' }} >{mapping.itemName}</p>
                 <button className='edit-button' onClick={() => modal_Function(mapping.id)}>Edit</button>
               </div>
             );
