@@ -24,11 +24,16 @@ const App = () => {
     settoggledd(true);
   };
 
+ const clear_All = () => {
+  setstore([])
+ }
+
   return (
     <div className='wrapper'>
       <div className='placeholder'>
         <input type="text" className='write' placeholder='Write here' value={Text} onChange={(e) => settext(e.target.value)} />
         <button className='add-button' onClick={add_Handler}>Add</button>
+        <button className='modal-button delete-button' onClick={clear_All}  >Delete All</button>
       </div>
       <div className='mapping'>
         {
